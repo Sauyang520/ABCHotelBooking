@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+
+<AnchorPane prefHeight="450.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.hotelbooking.controller.ManageCustomersPageController">
+   <children>
+      <TableView fx:id="tableViewCustomer" layoutX="20.0" layoutY="127.0" prefHeight="240.0" prefWidth="543.0">
+        <columns>
+          <TableColumn fx:id="columnIc" editable="false" prefWidth="85.0" text="IC " />
+          <TableColumn fx:id="columnPassport" editable="false" prefWidth="85.0" text="Passport" />
+            <TableColumn fx:id="columnName" editable="false" prefWidth="130.0" text="Name" />
+            <TableColumn fx:id="columnContact" editable="false" prefWidth="90.0" text="Contact" />
+            <TableColumn fx:id="columnEmail" editable="false" prefWidth="150.0" text="Email" />
+        </columns>
+      </TableView>
+      <TextField fx:id="textFieldSearch" layoutX="65.0" layoutY="78.0" />
+      <RadioButton fx:id="radioButtonIc" layoutX="65.0" layoutY="46.0" mnemonicParsing="false" onAction="#unCheck" text="IC" />
+      <RadioButton fx:id="radioButtonPassport" layoutX="115.0" layoutY="46.0" mnemonicParsing="false" onAction="#unCheck" text="Passport" />
+      <Button layoutX="235.0" layoutY="78.0" mnemonicParsing="false" onAction="#refresh" text="Refresh" />
+      <Line disable="true" endX="-16.79998779296875" endY="284.0" layoutX="600.0" layoutY="166.0" opacity="0.4" startX="-16.79998779296875" startY="-166.0" />
+      <Button layoutX="630.0" layoutY="341.0" mnemonicParsing="false" onAction="#addNewCustomer" text="Add" />
+      <Label layoutX="613.0" layoutY="87.0" text="Customer Name" />
+      <Label layoutX="613.0" layoutY="210.0" text="Contact Number" />
+      <Label layoutX="613.0" layoutY="268.0" text="Email" />
+      <RadioButton fx:id="radioButtonNewIc" layoutX="613.0" layoutY="145.0" mnemonicParsing="false" text="IC">
+         <toggleGroup>
+            <ToggleGroup fx:id="ID" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="radioButtonNewPassport" layoutX="663.0" layoutY="145.0" mnemonicParsing="false" text="Passport">
+         <toggleGroup>
+            <ToggleGroup fx:id="ID" />
+         </toggleGroup>
+      </RadioButton>
+      <TextField fx:id="textFieldCustomerName" layoutX="613.0" layoutY="105.0" />
+      <TextField fx:id="textFieldCustomerId" layoutX="613.0" layoutY="170.0" />
+      <TextField fx:id="textFieldContactNumber" layoutX="613.0" layoutY="228.0" />
+      <TextField fx:id="textFieldEmail" layoutX="613.0" layoutY="286.0" />
+      <Label layoutX="65.0" layoutY="19.0" text="Search By:" />
+      <RadioButton fx:id="radioButtonName" layoutX="204.0" layoutY="46.0" mnemonicParsing="false" onAction="#unCheck" text="Name" />
+      <Label layoutX="407.0" layoutY="374.0" text="Select from table to delete" />
+      <Button layoutX="497.0" layoutY="398.0" mnemonicParsing="false" onAction="#deleteCustomer" text="Delete" />
+      <Button layoutX="20.0" layoutY="398.0" mnemonicParsing="false" onAction="#saveAndReturn" text="Save and Return" />
+      <Label fx:id="labelWarning" layoutX="265.0" layoutY="19.0" prefHeight="18.0" prefWidth="298.0" />
+      <RadioButton fx:id="radioButtonContact" layoutX="274.0" layoutY="46.0" mnemonicParsing="false" onAction="#unCheck" text="Contact" />
+      <RadioButton fx:id="radioButtonEmail" layoutX="346.0" layoutY="46.0" mnemonicParsing="false" onAction="#unCheck" text="Email" />
+      <RadioButton fx:id="radioButtonAllCustomer" layoutX="411.0" layoutY="46.0" mnemonicParsing="false" onAction="#unCheck" selected="true" text="View All Customer" />
+      <Button layoutX="8.0" layoutY="8.0" mnemonicParsing="false" onAction="#goBack" text="Back" />
+      <Button layoutX="692.0" layoutY="341.0" mnemonicParsing="false" onAction="#modifyCustomer" text="Modify" />
+      <CheckBox fx:id="checkBoxPassport" layoutX="429.0" layoutY="95.0" mnemonicParsing="false" selected="true" text="Passport" />
+      <CheckBox fx:id="checkBoxIc" layoutX="429.0" layoutY="68.0" mnemonicParsing="false" selected="true" text="IC" />
+   </children>
+</AnchorPane>

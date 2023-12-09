@@ -1,0 +1,1 @@
+java --module-path "C:/JavaFiles/Java/javafx-sdk-20.0.1/lib;C:\JavaFiles\Java\logback" --add-modules javafx.controls,javafx.fxml,org.slf4j -jar C:\ABCHotelBookingSystem_TP065596\out\artifacts\ABCHotelBookingSystem_TP065596_jar\ABCHotelBookingSystem_TP065596.jar
